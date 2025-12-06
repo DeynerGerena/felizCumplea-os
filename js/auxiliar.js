@@ -6,7 +6,7 @@
 */
 
 const FOLDER_ID = '1XQheOQBvXT_9KzQxQt9dpGftpwNjxtdw';
-const API_KEY = 'AIzaSyAoIVJvUKltxN6YNKwSAdpVXIumqDoIoQM'; // <-- sustituye aquí tu API KEY
+const API_KEY = 'AIzaSyDdlKGV-3t2mWjhG5GnICNqReuGxYJcHT0'; // <-- sustituye aquí tu API KEY
 
 const gallery = document.getElementById('videoGallery');
 const emptyMessage = document.getElementById('emptyMessage');
@@ -114,6 +114,7 @@ function escapeHtml(str){
   if (!str) return '';
   return str.replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[s]));
 }
+
 
 
 

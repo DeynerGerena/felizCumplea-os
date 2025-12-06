@@ -6,7 +6,7 @@
 */
 
 const FOLDER_ID = '1XQheOQBvXT_9KzQxQt9dpGftpwNjxtdw';
-const API_KEY = '881356004828-llsvsu7l40cbjvae354nv2nda3odls96.apps.googleusercontent.com'; // <-- sustituye aquí tu API KEY
+const API_KEY = 'AIzaSyAoIVJvUKltxN6YNKwSAdpVXIumqDoIoQM'; // <-- sustituye aquí tu API KEY
 
 const gallery = document.getElementById('videoGallery');
 const emptyMessage = document.getElementById('emptyMessage');
@@ -16,7 +16,7 @@ const closeModalBtn = document.getElementById('closeModal');
 const player = document.getElementById('playerVideo');
 const playerTitle = document.getElementById('playerTitle');
 
-if (!API_KEY || API_KEY === '881356004828-llsvsu7l40cbjvae354nv2nda3odls96.apps.googleusercontent.com') {
+if (!API_KEY || API_KEY === 'AIzaSyAoIVJvUKltxN6YNKwSAdpVXIumqDoIoQM') {
   emptyMessage.style.display = 'block';
   emptyMessage.innerHTML = `No hay API key configurada. Edita <code>js/auxiliar.js</code> y coloca tu API Key de Google.`;
   console.warn('API_KEY missing in js/auxiliar.js');
@@ -114,5 +114,6 @@ function escapeHtml(str){
   if (!str) return '';
   return str.replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[s]));
 }
+
 
 

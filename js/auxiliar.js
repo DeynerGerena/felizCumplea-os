@@ -16,7 +16,7 @@ const closeModalBtn = document.getElementById('closeModal');
 const player = document.getElementById('playerVideo');
 const playerTitle = document.getElementById('playerTitle');
 
-if (!API_KEY || API_KEY === 'AIzaSyAoIVJvUKltxN6YNKwSAdpVXIumqDoIoQM') {
+if (!API_KEY) {
   emptyMessage.style.display = 'block';
   emptyMessage.innerHTML = `No hay API key configurada. Edita <code>js/auxiliar.js</code> y coloca tu API Key de Google.`;
   console.warn('API_KEY missing in js/auxiliar.js');
@@ -114,6 +114,7 @@ function escapeHtml(str){
   if (!str) return '';
   return str.replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[s]));
 }
+
 
 
 

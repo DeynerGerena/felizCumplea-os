@@ -29,7 +29,7 @@ function buildFilesUrl() {
   const q = `'${FOLDER_ID}'+in+parents+and+mimeType+contains+'video/'`;
   // solicitamos campos útiles: id, name, thumbnailLink, mimeType, createdTime
   const fields = 'files(id,name,thumbnailLink,mimeType,createdTime,webContentLink,webViewLink)';
-  const url = `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent(q)}&key=${API_KEY}&fields=${encodeURIComponent(fields)}&orderBy=createdTime desc&pageSize=200`;
+  const url = `https://www.googleapis.com/drive/v3/files/&{FOLDER_ID}&key=${API_KEY}&orderBy=createdTime desc&pageSize=200`;
   return url;
 }
 
@@ -114,6 +114,7 @@ function escapeHtml(str){
   if (!str) return '';
   return str.replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[s]));
 }
+
 
 
 
